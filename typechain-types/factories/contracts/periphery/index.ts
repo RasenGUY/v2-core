@@ -4,6 +4,7 @@
 export * as wethSol from "./WETH.sol";
 export * as examples from "./examples";
 export * as interfaces from "./interfaces";
+export { TestToken__factory } from "./TestToken__factory";
 export { UniswapV2Migrator__factory } from "./UniswapV2Migrator__factory";
 export { UniswapV2Router01__factory } from "./UniswapV2Router01__factory";
 export { UniswapV2Router02__factory } from "./UniswapV2Router02__factory";

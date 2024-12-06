@@ -14,6 +14,14 @@ import * as Contracts from ".";
 declare module "hardhat/types/runtime" {
   interface HardhatEthersHelpers extends HardhatEthersHelpersBase {
     getContractFactory(
+      name: "ERC20",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.ERC20__factory>;
+    getContractFactory(
+      name: "IERC20",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.IERC20__factory>;
+    getContractFactory(
       name: "FixedPoint",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.FixedPoint__factory>;
@@ -102,6 +110,10 @@ declare module "hardhat/types/runtime" {
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.IUniswapV1Factory__factory>;
     getContractFactory(
+      name: "TestToken",
+      signerOrOptions?: ethers.Signer | FactoryOptions
+    ): Promise<Contracts.TestToken__factory>;
+    getContractFactory(
       name: "UniswapV2Migrator",
       signerOrOptions?: ethers.Signer | FactoryOptions
     ): Promise<Contracts.UniswapV2Migrator__factory>;
@@ -119,6 +131,16 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.WETH9__factory>;
 
     getContractAt(
+      name: "ERC20",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.ERC20>;
+    getContractAt(
+      name: "IERC20",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.IERC20>;
+    getContractAt(
       name: "FixedPoint",
       address: string | ethers.Addressable,
       signer?: ethers.Signer
@@ -228,6 +250,11 @@ declare module "hardhat/types/runtime" {
       address: string | ethers.Addressable,
       signer?: ethers.Signer
     ): Promise<Contracts.IUniswapV1Factory>;
+    getContractAt(
+      name: "TestToken",
+      address: string | ethers.Addressable,
+      signer?: ethers.Signer
+    ): Promise<Contracts.TestToken>;
     getContractAt(
       name: "UniswapV2Migrator",
       address: string | ethers.Addressable,
@@ -250,6 +277,14 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.WETH9>;
 
     deployContract(
+      name: "ERC20",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ERC20>;
+    deployContract(
+      name: "IERC20",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IERC20>;
+    deployContract(
       name: "FixedPoint",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.FixedPoint>;
@@ -337,6 +372,10 @@ declare module "hardhat/types/runtime" {
       name: "IUniswapV1Factory",
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IUniswapV1Factory>;
+    deployContract(
+      name: "TestToken",
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.TestToken>;
     deployContract(
       name: "UniswapV2Migrator",
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -355,6 +394,16 @@ declare module "hardhat/types/runtime" {
     ): Promise<Contracts.WETH9>;
 
     deployContract(
+      name: "ERC20",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.ERC20>;
+    deployContract(
+      name: "IERC20",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.IERC20>;
+    deployContract(
       name: "FixedPoint",
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
@@ -464,6 +513,11 @@ declare module "hardhat/types/runtime" {
       args: any[],
       signerOrOptions?: ethers.Signer | DeployContractOptions
     ): Promise<Contracts.IUniswapV1Factory>;
+    deployContract(
+      name: "TestToken",
+      args: any[],
+      signerOrOptions?: ethers.Signer | DeployContractOptions
+    ): Promise<Contracts.TestToken>;
     deployContract(
       name: "UniswapV2Migrator",
       args: any[],
