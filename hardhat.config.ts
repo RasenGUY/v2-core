@@ -1,7 +1,9 @@
 import { HardhatUserConfig } from "hardhat/config";
 import { pickBy } from 'lodash'
-
 import "@nomicfoundation/hardhat-toolbox";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 const settings = {
   optimizer: {
@@ -45,16 +47,6 @@ const config: HardhatUserConfig = {
       forking: {
         url: process.env.FORKED_CHAIN_NETWORK as string
       },
-    },
-    localhost: {
-      url: 'http://127.0.0.1:8545',
-      chainId: 31337,
-      forking: {
-        url: process.env.FORKED_CHAIN_NETWORK as string,
-        enabled: false,
-      },
-      throwOnTransactionFailures: true,
-      loggingEnabled: true,
     },
     optimismSepolia: {
       url: String(process.env.OPTIMISM_SEPOLIA_RPC_URL).concat(

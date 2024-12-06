@@ -1433,6 +1433,41 @@
       "artifacts": [
         "BitMath"
       ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/WETH.sol": {
+      "lastModificationDate": 1733500106651,
+      "contentHash": "e849b0ca4af59f0b6947d07ad30fc6e3",
+      "sourceName": "contracts/periphery/WETH.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.6"
+      ],
+      "artifacts": [
+        "WETH9"
+      ]
     }
   }
 }

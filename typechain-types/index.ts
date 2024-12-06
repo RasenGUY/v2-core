@@ -54,3 +54,5 @@ export type { UniswapV2Router01 } from "./contracts/periphery/UniswapV2Router01"
 export { UniswapV2Router01__factory } from "./factories/contracts/periphery/UniswapV2Router01__factory";
 export type { UniswapV2Router02 } from "./contracts/periphery/UniswapV2Router02";
 export { UniswapV2Router02__factory } from "./factories/contracts/periphery/UniswapV2Router02__factory";
+export type { WETH9 } from "./contracts/periphery/WETH.sol/WETH9";
+export { WETH9__factory } from "./factories/contracts/periphery/WETH.sol/WETH9__factory";

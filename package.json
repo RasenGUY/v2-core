@@ -34,6 +34,7 @@
     "@types/lodash": "^4.17.13",
     "@types/mocha": "^5.2.7",
     "chai": "4",
+    "dotenv": "^16.4.7",
     "ethers": "^6.13.4",
     "hardhat": "^2.22.17",
     "hardhat-gas-reporter": "^2.2.2",
