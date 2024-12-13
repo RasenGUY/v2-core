@@ -60,6 +60,9 @@ const config: HardhatUserConfig = {
       loggingEnabled: true,
     },
   },
+  // sourcify: {
+  //   enabled: true
+  // },
   etherscan: {
     apiKey: pickBy({
       mainnet: process.env.ETHERSCAN_API_KEY,

@@ -38,6 +38,7 @@
     "ethers": "^6.13.4",
     "hardhat": "^2.22.17",
     "hardhat-gas-reporter": "^2.2.2",
+    "hardhat-verify": "^1.0.0",
     "lodash": "^4.17.21",
     "solc": "0.5.16",
     "solidity-coverage": "^0.8.14",
@@ -48,7 +49,9 @@
   "scripts": {
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
-    "precompile": "yarn clean"
+    "precompile": "yarn clean",
+    "deploy:localhost": "npx hardhat ignition deploy ./ignition/modules/Uniswap.ts --network localhost",
+    "deploy:op-sepolia": "npx hardhat ignition deploy ./ignition/modules/Uniswap.ts --network optimismSepolia"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {

@@ -1,10 +1,14 @@
 import { buildModule } from "@nomicfoundation/hardhat-ignition/modules";
 
-const UnswapModule = buildModule("UniswapModule", (m) => {
+const UniswapModule = buildModule("UniswapModule", (m) => {
     const owner = m.getAccount(0);
-    const token = m.contract("TestToken", [], { id: 'token', from: owner }); 
+    const token = m.contract("TestToken", [], { 
+        id: 'token', 
+        from: owner 
+    }); 
     const weth = m.contract("WETH9", [], {
-        id: "weth"
+        id: "weth",
+        after: [token], // wait for token to be deployed
     });
     const factory = m.contract("UniswapV2Factory",  [
         owner
@@ -18,9 +22,9 @@ const UnswapModule = buildModule("UniswapModule", (m) => {
         weth
     ], {
         id: "router", 
-        after: [weth, factory], // wait for weth and factory to be deployed
+        after: [factory], // wait for weth and factory to be deployed
     })
     return { weth, factory, router, token };
 });
 
-module.exports = UnswapModule;
+export default UniswapModule;

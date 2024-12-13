@@ -2,8 +2,8 @@
   "_format": "hh-sol-cache-2",
   "files": {
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/UniswapV2ERC20.sol": {
-      "lastModificationDate": 1733467379157,
-      "contentHash": "4bb5eafcdc90c47feab795fc96671d59",
+      "lastModificationDate": 1733570685308,
+      "contentHash": "590cf1a456131df98371c9ccab890888",
       "sourceName": "contracts/core/UniswapV2ERC20.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -112,8 +112,8 @@
       ]
     },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/UniswapV2Pair.sol": {
-      "lastModificationDate": 1733467379175,
-      "contentHash": "04b129f0ab195c778c2717f368acc162",
+      "lastModificationDate": 1733570642714,
+      "contentHash": "4b1317cac959bb5acc258a9e1199ca7a",
       "sourceName": "contracts/core/UniswapV2Pair.sol",
       "solcConfig": {
         "version": "0.5.16",
@@ -225,7 +225,7 @@
       ]
     },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/UniswapV2Factory.sol": {
-      "lastModificationDate": 1733467379166,
+      "lastModificationDate": 1733725584826,
       "contentHash": "bbd1d6d8cec14355db9a75d10b0d6802",
       "sourceName": "contracts/core/UniswapV2Factory.sol",
       "solcConfig": {
@@ -262,10 +262,45 @@
         "UniswapV2Factory"
       ]
     },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/interfaces/IUniswapV2Pair.sol": {
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/WETH.sol": {
+      "lastModificationDate": 1733508152172,
+      "contentHash": "a4c5471ea63694d2c7c798a3d349347d",
+      "sourceName": "contracts/periphery/WETH.sol",
+      "solcConfig": {
+        "version": "0.5.16",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.6"
+      ],
+      "artifacts": [
+        "WETH9"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/interfaces/IUniswapV2Callee.sol": {
       "lastModificationDate": 1733408789812,
-      "contentHash": "3fa31c3860f2b9585c3a98c64850829e",
-      "sourceName": "contracts/core/interfaces/IUniswapV2Pair.sol",
+      "contentHash": "30a4aed15b3fa3ce5588118b7cecfa7f",
+      "sourceName": "contracts/core/interfaces/IUniswapV2Callee.sol",
       "solcConfig": {
         "version": "0.6.6",
         "settings": {
@@ -297,613 +332,7 @@
         ">=0.5.0"
       ],
       "artifacts": [
-        "IUniswapV2Pair"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/UniswapV2OracleLibrary.sol": {
-      "lastModificationDate": 1733468670536,
-      "contentHash": "f95c122f31bc2d76989bb185fd6dc247",
-      "sourceName": "contracts/periphery/libraries/UniswapV2OracleLibrary.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@uniswap/lib/contracts/libraries/FixedPoint.sol",
-        "../../core/interfaces/IUniswapV2Pair.sol"
-      ],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "UniswapV2OracleLibrary"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/FixedPoint.sol": {
-      "lastModificationDate": 1733468559968,
-      "contentHash": "9c78b75695500ec38a85fea7d923fbf0",
-      "sourceName": "@uniswap/lib/contracts/libraries/FixedPoint.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./FullMath.sol",
-        "./Babylonian.sol",
-        "./BitMath.sol"
-      ],
-      "versionPragmas": [
-        ">=0.4.0"
-      ],
-      "artifacts": [
-        "FixedPoint"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/Babylonian.sol": {
-      "lastModificationDate": 1733468559968,
-      "contentHash": "3f7a9d2b13eebc20350a1cc42ed09b16",
-      "sourceName": "@uniswap/lib/contracts/libraries/Babylonian.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.0"
-      ],
-      "artifacts": [
-        "Babylonian"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/FullMath.sol": {
-      "lastModificationDate": 1733468559968,
-      "contentHash": "23bbd047cedfd8027fb139fcab949cc0",
-      "sourceName": "@uniswap/lib/contracts/libraries/FullMath.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.0"
-      ],
-      "artifacts": [
-        "FullMath"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/UniswapV2LiquidityMathLibrary.sol": {
-      "lastModificationDate": 1733469702711,
-      "contentHash": "4497638c0242a9a74876d415efd03c64",
-      "sourceName": "contracts/periphery/libraries/UniswapV2LiquidityMathLibrary.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@uniswap/lib/contracts/libraries/Babylonian.sol",
-        "@uniswap/lib/contracts/libraries/FullMath.sol",
-        "../../core/interfaces/IUniswapV2Factory.sol",
-        "../../core/interfaces/IUniswapV2Pair.sol",
-        "./SafeMath.sol",
-        "./UniswapV2Library.sol"
-      ],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "UniswapV2LiquidityMathLibrary"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/interfaces/IUniswapV2Factory.sol": {
-      "lastModificationDate": 1733408789812,
-      "contentHash": "ec39b5372f4f4d52101b4da561e2aee6",
-      "sourceName": "contracts/core/interfaces/IUniswapV2Factory.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IUniswapV2Factory"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/SafeMath.sol": {
-      "lastModificationDate": 1733467244065,
-      "contentHash": "9f77127a0e2c55c2058453327e84bde3",
-      "sourceName": "contracts/periphery/libraries/SafeMath.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        "=0.6.6"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/UniswapV2Library.sol": {
-      "lastModificationDate": 1733469704660,
-      "contentHash": "82793b1fa31c19683fc74ed3c19db25d",
-      "sourceName": "contracts/periphery/libraries/UniswapV2Library.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "../../core/interfaces/IUniswapV2Pair.sol",
-        "./SafeMath.sol"
-      ],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "UniswapV2Library"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/examples/ExampleSwapToPrice.sol": {
-      "lastModificationDate": 1733469787116,
-      "contentHash": "7a22fef63d5f8270aa2f3ad0589e6b01",
-      "sourceName": "contracts/periphery/examples/ExampleSwapToPrice.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@uniswap/lib/contracts/libraries/Babylonian.sol",
-        "@uniswap/lib/contracts/libraries/TransferHelper.sol",
-        "../../core/interfaces/IUniswapV2Pair.sol",
-        "../libraries/UniswapV2LiquidityMathLibrary.sol",
-        "../interfaces/IERC20.sol",
-        "../interfaces/IUniswapV2Router01.sol",
-        "../libraries/SafeMath.sol",
-        "../libraries/UniswapV2Library.sol"
-      ],
-      "versionPragmas": [
-        "=0.6.6"
-      ],
-      "artifacts": [
-        "ExampleSwapToPrice"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IERC20.sol": {
-      "lastModificationDate": 1733467244065,
-      "contentHash": "3d2b948a9266ee66b6e739de97c7e6e9",
-      "sourceName": "contracts/periphery/interfaces/IERC20.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IERC20"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IUniswapV2Router01.sol": {
-      "lastModificationDate": 1733467244065,
-      "contentHash": "95d8729b2c698dc663322167b3c085fe",
-      "sourceName": "contracts/periphery/interfaces/IUniswapV2Router01.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.2"
-      ],
-      "artifacts": [
-        "IUniswapV2Router01"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/TransferHelper.sol": {
-      "lastModificationDate": 1733468559968,
-      "contentHash": "7fad4038612c5f040ebd746a3e58e0db",
-      "sourceName": "@uniswap/lib/contracts/libraries/TransferHelper.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.0"
-      ],
-      "artifacts": [
-        "TransferHelper"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/UniswapV2Router02.sol": {
-      "lastModificationDate": 1733469649843,
-      "contentHash": "462a98b4001ff20742201a68f60a4aa4",
-      "sourceName": "contracts/periphery/UniswapV2Router02.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "@uniswap/lib/contracts/libraries/TransferHelper.sol",
-        "../core/interfaces/IUniswapV2Factory.sol",
-        "./interfaces/IUniswapV2Router02.sol",
-        "./libraries/UniswapV2Library.sol",
-        "./libraries/SafeMath.sol",
-        "./interfaces/IERC20.sol",
-        "./interfaces/IWETH.sol"
-      ],
-      "versionPragmas": [
-        "=0.6.6"
-      ],
-      "artifacts": [
-        "UniswapV2Router02"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IUniswapV2Router02.sol": {
-      "lastModificationDate": 1733467244065,
-      "contentHash": "3fd36426274a5b35f7e702f87ba08a8e",
-      "sourceName": "contracts/periphery/interfaces/IUniswapV2Router02.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [
-        "./IUniswapV2Router01.sol"
-      ],
-      "versionPragmas": [
-        ">=0.6.2"
-      ],
-      "artifacts": [
-        "IUniswapV2Router02"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IWETH.sol": {
-      "lastModificationDate": 1733467244065,
-      "contentHash": "270f2c1a1f22475259d5a2f6a524f72e",
-      "sourceName": "contracts/periphery/interfaces/IWETH.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "IWETH"
+        "IUniswapV2Callee"
       ]
     },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/examples/ExampleFlashSwap.sol": {
@@ -952,10 +381,10 @@
         "ExampleFlashSwap"
       ]
     },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/interfaces/IUniswapV2Callee.sol": {
-      "lastModificationDate": 1733408789812,
-      "contentHash": "30a4aed15b3fa3ce5588118b7cecfa7f",
-      "sourceName": "contracts/core/interfaces/IUniswapV2Callee.sol",
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/UniswapV2Library.sol": {
+      "lastModificationDate": 1733725592266,
+      "contentHash": "1694480b680c60d3e212105c53e424cb",
+      "sourceName": "contracts/periphery/libraries/UniswapV2Library.sol",
       "solcConfig": {
         "version": "0.6.6",
         "settings": {
@@ -982,12 +411,16 @@
           }
         }
       },
-      "imports": [],
+      "imports": [
+        "../../core/interfaces/IUniswapV2Pair.sol",
+        "hardhat/console.sol",
+        "./SafeMath.sol"
+      ],
       "versionPragmas": [
         ">=0.5.0"
       ],
       "artifacts": [
-        "IUniswapV2Callee"
+        "UniswapV2Library"
       ]
     },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/V1/IUniswapV1Factory.sol": {
@@ -1066,10 +499,200 @@
         "IUniswapV1Exchange"
       ]
     },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/UniswapV2Router01.sol": {
-      "lastModificationDate": 1733469641430,
-      "contentHash": "e4a3050cc50565a3055333c3cc194b53",
-      "sourceName": "contracts/periphery/UniswapV2Router01.sol",
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IUniswapV2Router01.sol": {
+      "lastModificationDate": 1733467244065,
+      "contentHash": "95d8729b2c698dc663322167b3c085fe",
+      "sourceName": "contracts/periphery/interfaces/IUniswapV2Router01.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router01"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IERC20.sol": {
+      "lastModificationDate": 1733467244065,
+      "contentHash": "3d2b948a9266ee66b6e739de97c7e6e9",
+      "sourceName": "contracts/periphery/interfaces/IERC20.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IWETH.sol": {
+      "lastModificationDate": 1733467244065,
+      "contentHash": "270f2c1a1f22475259d5a2f6a524f72e",
+      "sourceName": "contracts/periphery/interfaces/IWETH.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IWETH"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/interfaces/IUniswapV2Pair.sol": {
+      "lastModificationDate": 1733408789812,
+      "contentHash": "3fa31c3860f2b9585c3a98c64850829e",
+      "sourceName": "contracts/core/interfaces/IUniswapV2Pair.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IUniswapV2Pair"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/SafeMath.sol": {
+      "lastModificationDate": 1733467244065,
+      "contentHash": "9f77127a0e2c55c2058453327e84bde3",
+      "sourceName": "contracts/periphery/libraries/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/UniswapV2Router02.sol": {
+      "lastModificationDate": 1733725052074,
+      "contentHash": "c3b1ec2e48ba6d4bcc2ee3b5cf5e0fa4",
+      "sourceName": "contracts/periphery/UniswapV2Router02.sol",
       "solcConfig": {
         "version": "0.6.6",
         "settings": {
@@ -1097,10 +720,12 @@
         }
       },
       "imports": [
+        "hardhat/console.sol",
         "@uniswap/lib/contracts/libraries/TransferHelper.sol",
         "../core/interfaces/IUniswapV2Factory.sol",
+        "./interfaces/IUniswapV2Router02.sol",
         "./libraries/UniswapV2Library.sol",
-        "./interfaces/IUniswapV2Router01.sol",
+        "./libraries/SafeMath.sol",
         "./interfaces/IERC20.sol",
         "./interfaces/IWETH.sol"
       ],
@@ -1108,7 +733,371 @@
         "=0.6.6"
       ],
       "artifacts": [
-        "UniswapV2Router01"
+        "UniswapV2Router02"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/core/interfaces/IUniswapV2Factory.sol": {
+      "lastModificationDate": 1733408789812,
+      "contentHash": "ec39b5372f4f4d52101b4da561e2aee6",
+      "sourceName": "contracts/core/interfaces/IUniswapV2Factory.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "IUniswapV2Factory"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/interfaces/IUniswapV2Router02.sol": {
+      "lastModificationDate": 1733467244065,
+      "contentHash": "3fd36426274a5b35f7e702f87ba08a8e",
+      "sourceName": "contracts/periphery/interfaces/IUniswapV2Router02.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IUniswapV2Router01.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2"
+      ],
+      "artifacts": [
+        "IUniswapV2Router02"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/hardhat/console.sol": {
+      "lastModificationDate": 1733467822619,
+      "contentHash": "681c532e816169606d13a5fe8b475074",
+      "sourceName": "hardhat/console.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.22 <0.9.0"
+      ],
+      "artifacts": [
+        "console"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/TransferHelper.sol": {
+      "lastModificationDate": 1733468559968,
+      "contentHash": "7fad4038612c5f040ebd746a3e58e0db",
+      "sourceName": "@uniswap/lib/contracts/libraries/TransferHelper.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0"
+      ],
+      "artifacts": [
+        "TransferHelper"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/examples/ExampleSwapToPrice.sol": {
+      "lastModificationDate": 1733469787116,
+      "contentHash": "7a22fef63d5f8270aa2f3ad0589e6b01",
+      "sourceName": "contracts/periphery/examples/ExampleSwapToPrice.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/lib/contracts/libraries/Babylonian.sol",
+        "@uniswap/lib/contracts/libraries/TransferHelper.sol",
+        "../../core/interfaces/IUniswapV2Pair.sol",
+        "../libraries/UniswapV2LiquidityMathLibrary.sol",
+        "../interfaces/IERC20.sol",
+        "../interfaces/IUniswapV2Router01.sol",
+        "../libraries/SafeMath.sol",
+        "../libraries/UniswapV2Library.sol"
+      ],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "ExampleSwapToPrice"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/UniswapV2LiquidityMathLibrary.sol": {
+      "lastModificationDate": 1733469702711,
+      "contentHash": "4497638c0242a9a74876d415efd03c64",
+      "sourceName": "contracts/periphery/libraries/UniswapV2LiquidityMathLibrary.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/lib/contracts/libraries/Babylonian.sol",
+        "@uniswap/lib/contracts/libraries/FullMath.sol",
+        "../../core/interfaces/IUniswapV2Factory.sol",
+        "../../core/interfaces/IUniswapV2Pair.sol",
+        "./SafeMath.sol",
+        "./UniswapV2Library.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "UniswapV2LiquidityMathLibrary"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/Babylonian.sol": {
+      "lastModificationDate": 1733468559968,
+      "contentHash": "3f7a9d2b13eebc20350a1cc42ed09b16",
+      "sourceName": "@uniswap/lib/contracts/libraries/Babylonian.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "Babylonian"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/FullMath.sol": {
+      "lastModificationDate": 1733468559968,
+      "contentHash": "23bbd047cedfd8027fb139fcab949cc0",
+      "sourceName": "@uniswap/lib/contracts/libraries/FullMath.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "FullMath"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/FixedPoint.sol": {
+      "lastModificationDate": 1733468559968,
+      "contentHash": "9c78b75695500ec38a85fea7d923fbf0",
+      "sourceName": "@uniswap/lib/contracts/libraries/FixedPoint.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./FullMath.sol",
+        "./Babylonian.sol",
+        "./BitMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.0"
+      ],
+      "artifacts": [
+        "FixedPoint"
       ]
     },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/examples/ExampleSlidingWindowOracle.sol": {
@@ -1156,6 +1145,47 @@
         "ExampleSlidingWindowOracle"
       ]
     },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/libraries/UniswapV2OracleLibrary.sol": {
+      "lastModificationDate": 1733468670536,
+      "contentHash": "f95c122f31bc2d76989bb185fd6dc247",
+      "sourceName": "contracts/periphery/libraries/UniswapV2OracleLibrary.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/lib/contracts/libraries/FixedPoint.sol",
+        "../../core/interfaces/IUniswapV2Pair.sol"
+      ],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "UniswapV2OracleLibrary"
+      ]
+    },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/examples/ExampleOracleSimple.sol": {
       "lastModificationDate": 1733469755870,
       "contentHash": "cee3cf44ebadff4b65383e27ba75f383",
@@ -1198,6 +1228,51 @@
       ],
       "artifacts": [
         "ExampleOracleSimple"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/UniswapV2Router01.sol": {
+      "lastModificationDate": 1733469641430,
+      "contentHash": "e4a3050cc50565a3055333c3cc194b53",
+      "sourceName": "contracts/periphery/UniswapV2Router01.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "@uniswap/lib/contracts/libraries/TransferHelper.sol",
+        "../core/interfaces/IUniswapV2Factory.sol",
+        "./libraries/UniswapV2Library.sol",
+        "./interfaces/IUniswapV2Router01.sol",
+        "./interfaces/IERC20.sol",
+        "./interfaces/IWETH.sol"
+      ],
+      "versionPragmas": [
+        "=0.6.6"
+      ],
+      "artifacts": [
+        "UniswapV2Router01"
       ]
     },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/UniswapV2Migrator.sol": {
@@ -1399,76 +1474,6 @@
         "IUniswapV2ERC20"
       ]
     },
-    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/BitMath.sol": {
-      "lastModificationDate": 1733468559968,
-      "contentHash": "9268c1120c875c017e31caad9aa38921",
-      "sourceName": "@uniswap/lib/contracts/libraries/BitMath.sol",
-      "solcConfig": {
-        "version": "0.5.0",
-        "settings": {
-          "optimizer": {
-            "enabled": false,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.5.0"
-      ],
-      "artifacts": [
-        "BitMath"
-      ]
-    },
-    "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/WETH.sol": {
-      "lastModificationDate": 1733508152172,
-      "contentHash": "a4c5471ea63694d2c7c798a3d349347d",
-      "sourceName": "contracts/periphery/WETH.sol",
-      "solcConfig": {
-        "version": "0.5.16",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.4.22 <0.6"
-      ],
-      "artifacts": [
-        "WETH9"
-      ]
-    },
     "/home/fernando-trouw/hashtag/uniswap-v2/contracts/periphery/TestToken.sol": {
       "lastModificationDate": 1733517632224,
       "contentHash": "1ff37bf15981cdd052daad909f936dee",
@@ -1551,44 +1556,6 @@
         "ERC20"
       ]
     },
-    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
-      "lastModificationDate": 1733499605430,
-      "contentHash": "e03e12206057e809eb76c5f681170c32",
-      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
-      "solcConfig": {
-        "version": "0.6.6",
-        "settings": {
-          "optimizer": {
-            "enabled": true,
-            "runs": 200
-          },
-          "metadata": {
-            "bytecodeHash": "none"
-          },
-          "outputSelection": {
-            "*": {
-              "*": [
-                "abi",
-                "evm.bytecode",
-                "evm.deployedBytecode",
-                "evm.methodIdentifiers",
-                "metadata"
-              ],
-              "": [
-                "ast"
-              ]
-            }
-          }
-        }
-      },
-      "imports": [],
-      "versionPragmas": [
-        ">=0.6.0 <0.8.0"
-      ],
-      "artifacts": [
-        "SafeMath"
-      ]
-    },
     "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@openzeppelin/contracts/utils/Context.sol": {
       "lastModificationDate": 1733499605431,
       "contentHash": "2adbd82f6d055a4751566d4671512b03",
@@ -1627,6 +1594,44 @@
         "Context"
       ]
     },
+    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@openzeppelin/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1733499605430,
+      "contentHash": "e03e12206057e809eb76c5f681170c32",
+      "sourceName": "@openzeppelin/contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.6.6",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "none"
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
     "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@openzeppelin/contracts/token/ERC20/IERC20.sol": {
       "lastModificationDate": 1733499605454,
       "contentHash": "e0a41531d159d3a32f84b7a3ecf9fabb",
@@ -1663,6 +1668,41 @@
       ],
       "artifacts": [
         "IERC20"
+      ]
+    },
+    "/home/fernando-trouw/hashtag/uniswap-v2/node_modules/@uniswap/lib/contracts/libraries/BitMath.sol": {
+      "lastModificationDate": 1733468559968,
+      "contentHash": "9268c1120c875c017e31caad9aa38921",
+      "sourceName": "@uniswap/lib/contracts/libraries/BitMath.sol",
+      "solcConfig": {
+        "version": "0.5.0",
+        "settings": {
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.5.0"
+      ],
+      "artifacts": [
+        "BitMath"
       ]
     }
   }

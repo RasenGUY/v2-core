@@ -13,8 +13,9 @@
     "./index.ts",
   ],
   "include": [
-    "scripts",
-    "typechain-types"
+    "scripts/**/*.ts",
+    "typechain-types",
+    "test/**/*.ts",
   ],
   "exclude": [
     "node_modules",

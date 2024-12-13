@@ -14,22 +14,14 @@ const routerAddress = deployedAddresses['UniswapModule#router'];
 const wetAddress = deployedAddresses['UniswapModule#weth'];
 const testTokenAddress = deployedAddresses['UniswapModule#token'];
 
-async function createPool(){
-    // context, the owner (account 0) already has roughly 1000000 TestToken
-    // 1. instantiate the factory, 
-    // 2. instantiate and the routerv2
-    // 3. prepare the call (for addLiquidityETH) on UniswapV2Router02.sol
-        // token, // should be space token
-        // amountTokenDesired, ?? 
-        // amountTokenMin, ?? 
-        // amountETHMin, ??
-        // to,
-        // deadline 1min
-        
-    const provider = new JsonRpcProvider('http://localhost:8545');
-    const owner = new ethers.Wallet('0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80', provider);
-    
 
+const ownerPkeys = '0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80'; // hardhat test wallet
+
+async function createPool(){
+
+    const provider = new JsonRpcProvider('http://localhost:8545');
+    const owner = new ethers.Wallet(ownerPkeys, provider);
+    
     const factory = new ethers.Contract(
         factoryAddress,
         UniswapFactoryAbi.abi,
@@ -54,29 +46,28 @@ async function createPool(){
         owner
     );
 
-    await testToken.approve(router.target, ethers.parseEther('1000000'));
+    await testToken.approve(router.target, parseEther('1000000'));
 
     const tx = await router.addLiquidityETH(
         testToken.target,
         parseEther('1000'),
-        0,
+        parseEther('1000'),
         parseEther('10'),
         owner.address,
         Math.floor(Date.now() / 1000) + 60,
         { 
-            value: ethers.parseEther('10') 
+            value: ethers.parseEther('10')
         }
     );
 
     await tx.wait();
-    
-
-    // Call getPair as a function, not a property
-    const pairAddress = await factory.getPair(testToken.target, weth.target);
-    
     console.log({
         message: "Liquidity added",
     });
+    
+
+    // Call getPair as a function, not a property
+    const pairAddress = await factory.getPair(weth.target, testToken.target,);
     
     const pairData = {
         pairAddress: pairAddress
