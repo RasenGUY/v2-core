@@ -1,6 +1,0 @@
-{
-  "UniswapModule#token": "0xb71028B389Ab39081f936424DAf015B7A03fABB9",
-  "UniswapModule#weth": "0x85E34d41200f85bDFbeA9597873Ca424D71ECF82",
-  "UniswapModule#factory": "0xF7d6c5c64AffF3C29aA179389BD36022e929771a",
-  "UniswapModule#router": "0xDfF0699b4a1583CBfd12440898Af82b9602502Bd"
-}
