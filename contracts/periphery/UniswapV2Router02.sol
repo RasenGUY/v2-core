@@ -1,6 +1,5 @@
 pragma solidity =0.6.6;
 
-import {console} from "hardhat/console.sol";
 import '@uniswap/lib/contracts/libraries/TransferHelper.sol';
 
 import '../core/interfaces/IUniswapV2Factory.sol';
